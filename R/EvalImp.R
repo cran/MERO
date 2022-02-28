@@ -31,14 +31,14 @@ EvalImp <- function(Originaldata, ImputedSets ,Imputed.mean, Imputed.sd)
   if (length(NA.SD) != 0)
   {
     Pro.sd <- Pro.sd[-NA.SD]  
-    Imputed.sd <- Imputed.sd[-NA.SD]
+    Imputed.sd <- Imputed.sd[-NA.SD,]
   }
   
   NA.mean <- which(is.na(Pro.means))
   if (length(NA.mean) != 0)
   {
     Pro.means <- Pro.means[-NA.mean]
-    Imputed.mean <- Imputed.mean[-NA.mean]
+    Imputed.mean <- Imputed.mean[-NA.mean,]
   }
   
   RMSE.Mean <- NULL
@@ -52,7 +52,7 @@ EvalImp <- function(Originaldata, ImputedSets ,Imputed.mean, Imputed.sd)
     RMSE.Sd[i] <- RMSE(Pro.sd, Imputed.sd[,i])
   }
   
-  min.inx <- which.min(RMSE.Mean)
+  min.inx <- which.min(RMSE.Mean)[1]
   Imp.return <- list(ImputedSets[[min.inx]], Pro.means, Imputed.mean[,min.inx])
   return(Imp.return)
 }

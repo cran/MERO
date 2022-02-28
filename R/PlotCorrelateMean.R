@@ -23,7 +23,7 @@ PlotCorrelateMean <- function(OriginalMean, ImputedMean)
             add.params = list(color = "blue",
                               fill = "lightgray")
   ) +
-    stat_cor(method = "pearson", label.x = 3, label.y = 30) 
+    stat_cor(method = "pearson") 
   
   plot(P)
   return(P)
