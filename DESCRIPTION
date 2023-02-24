@@ -1,7 +1,7 @@
 Package: MERO
 Title: Performing Monte Carlo Expectation Maximization Random Forest
         Imputation for Biological Data
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person("Mohamed", "Soudy", email = "MohmedSoudy2009@gmail.com", role=c("aut", "cre"))
 Author: Mohamed Soudy [aut, cre]
 Maintainer: Mohamed Soudy <MohmedSoudy2009@gmail.com>
@@ -12,5 +12,5 @@ RoxygenNote: 7.1.2
 Imports: missForest, ggpubr, progress, doParallel, foreach
 NeedsCompilation: no
 Repository: CRAN
-Packaged: 2022-02-28 22:47:03 UTC; Soudy
-Date/Publication: 2022-02-28 23:10:02 UTC
+Packaged: 2023-02-24 16:27:57 UTC; Soudy
+Date/Publication: 2023-02-24 16:40:02 UTC
